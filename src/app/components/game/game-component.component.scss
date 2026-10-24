@@ -64,6 +64,57 @@
 		line-height: 1.2;
 	}
 
+	.mode-link {
+		display: inline-flex;
+		align-items: center;
+		gap: 7px;
+		margin-left: auto;
+		padding: 9px 13px;
+		border: 1px solid rgb(226 201 142 / 65%);
+		border-radius: 999px;
+		color: #fff8e8;
+		background: rgb(255 255 255 / 7%);
+		font-size: 0.82rem;
+		font-weight: 700;
+		letter-spacing: 0.03em;
+		text-decoration: none;
+		white-space: nowrap;
+		transition: background-color 120ms ease, border-color 120ms ease;
+
+		&:hover {
+			background: rgb(255 255 255 / 15%);
+			border-color: #e2c98e;
+		}
+
+		&:focus-visible {
+			outline: 2px solid #e2c98e;
+			outline-offset: 3px;
+		}
+	}
+
+	@media (max-width: 520px) {
+		.site-header {
+			gap: 8px;
+			padding: 8px 12px;
+		}
+
+		.brand-mark {
+			width: 36px;
+			height: 36px;
+			flex-basis: 36px;
+			font-size: 21px;
+		}
+
+		.brand-tagline {
+			font-size: 0.68rem;
+		}
+
+		.mode-link {
+			padding: 7px 9px;
+			font-size: 0.72rem;
+		}
+	}
+
 	.brand-accent {
 		width: 48px;
 		height: 1px;
