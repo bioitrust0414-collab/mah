@@ -1,23 +1,56 @@
-<div align="center"><a href="https://github.com/Safouene1/support-palestine-banner/blob/master/Markdown-pages/Support.md"><img src="https://raw.githubusercontent.com/Safouene1/support-palestine-banner/master/banner-support.svg" alt="Support Palestine" style="width: 100%;"></a></div>
+# 麻將接龍｜Mah Jong Solitaire
 
-<div align="center">
- <img width="500" height="350" src="logo.svg" alt="Mah">
-</div>
+本專案是基於 [ffalt/mah](https://github.com/ffalt/mah) 開源專案調整的麻將接龍網站，部署版本以繁體中文品牌「麻將接龍」呈現。
 
-# Mah - Mahjong Solitaire
+## 正式網站
 
-The original open-source Mahjong Solitaire game powering many Mahjong experiences on the web.  
-**Completely free. No ads. No tracking. No cloud.**
+- **正式網址：** https://mj-game.netlify.app
+- **正式開發分支：** `main`
+- **部署平台：** Netlify
+- **Netlify 專案：** https://app.netlify.com/projects/mj-game/overview
+- **上游原始專案：** https://github.com/ffalt/mah
 
-## 🀄 [Play now in your browser](https://ffalt.github.io/mah/)
+## 本專案的客製化方向
 
-[![license](https://img.shields.io/github/license/ffalt/mah.svg)](http://opensource.org/licenses/MIT)
-![test](https://github.com/ffalt/mah/workflows/test/badge.svg)
-[![developer](https://img.shields.io/badge/developer-awesome-brightgreen.svg)](https://github.com/ffalt/mah)
-[![Maintainability](https://qlty.sh/gh/ffalt/projects/mah/maintainability.svg)](https://qlty.sh/gh/ffalt/projects/mah)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/35c2364ef29946f3a26b7605a34c75a8)](https://app.codacy.com/gh/ffalt/mah/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
+- 網站品牌名稱採用「麻將接龍」。
+- 頁首使用深翡翠綠與香檳金的視覺配色。
+- 頁首在禪模式中隱藏，避免干擾遊戲畫面。
+- 保留上游專案的麻將接龍遊戲功能，後續客製化以不破壞原有玩法為原則。
 
----
+## 分支與整合規則
+
+- `main` 是本專案唯一正式整合與 Netlify 部署分支。
+- `chore/sync-upstream-2026-10-24` 是同步用途分支；合併前需確認是否有獨有提交。
+- `master` 是已棄用的舊分支，README 已指向上游專案；不要合併回 `main`。
+- `gh-pages` 保留作為獨立歷史／舊部署分支，不要直接與 `main` 合併。
+- Dependabot 分支應逐一檢查更新內容與 CI 結果，再決定是否合併。
+- 不要只因分支存在就直接合併或刪除；先比較提交與檔案差異。
+
+## 本機開發
+
+需求：Node.js 26 或更新版本（請以 `package.json` 的 engines 設定為準）。
+
+```bash
+npm install
+npm run start
+```
+
+本機開發伺服器預設為 http://localhost:4200/ 。
+
+## 建置與測試
+
+```bash
+npm run build:prod
+npm run test
+```
+
+- `npm run build:prod`：執行正式建置，輸出至 `dist/`。
+- `npm run test`：執行單元測試。
+- Netlify 正式部署應由 `main` 分支觸發；部署完成後，請在 Netlify 確認 deploy 狀態為 Published/Ready，並實際檢查正式網站。
+
+## 原始專案功能與致謝
+
+以下功能說明沿用上游專案文件。原始程式、遊戲功能、素材與授權仍應以 [ffalt/mah](https://github.com/ffalt/mah) 的官方說明及本專案內各素材的授權資訊為準。
 
 ## ✨ Features
 
