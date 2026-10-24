@@ -1,5 +1,16 @@
 <div class="sr-only" aria-live="polite" aria-atomic="true">{{ announceText() }}</div>
 
+@if (!zenMode()) {
+	<header class="site-header" aria-label="網站標題">
+		<div class="brand-mark" aria-hidden="true">🀄</div>
+		<div class="brand-copy">
+			<h1 class="brand-name">麻將接龍</h1>
+			<p class="brand-tagline">靜心配對・經典牌局</p>
+		</div>
+		<span class="brand-accent" aria-hidden="true"></span>
+	</header>
+}
+
 <app-dialog
 	#tutorial (clickEvent)="toggleDialogState($event)" className="overlay-tutorial overlay-size-small"
 	[noCloseButton]="true" [allowCloseOverlay]="false" [title]="app.name"
