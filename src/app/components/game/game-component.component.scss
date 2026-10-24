@@ -3,6 +3,75 @@
 
 :host {
 	display: flex;
+
+	.site-header {
+		position: relative;
+		z-index: 2;
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		flex: 0 0 auto;
+		min-height: 64px;
+		padding: 9px clamp(16px, 3vw, 32px);
+		color: #fff8e8;
+		background: linear-gradient(110deg, #102f29 0%, #17483a 55%, #205743 100%);
+		border-bottom: 1px solid rgb(222 188 112 / 65%);
+		box-shadow: 0 3px 14px rgb(0 0 0 / 18%);
+
+		&::before {
+			content: "";
+			position: absolute;
+			inset: 0 auto 0 0;
+			width: 4px;
+			background: #d9b56d;
+		}
+	}
+
+	.brand-mark {
+		display: grid;
+		place-items: center;
+		width: 42px;
+		height: 42px;
+		flex: 0 0 42px;
+		border: 1px solid rgb(229 199 133 / 75%);
+		border-radius: 12px;
+		background: rgb(255 255 255 / 8%);
+		font-size: 25px;
+		box-shadow: inset 0 0 0 3px rgb(255 255 255 / 3%);
+	}
+
+	.brand-copy {
+		min-width: 0;
+	}
+
+	.brand-name {
+		margin: 0;
+		color: #fff8e8;
+		font-family: "Noto Serif TC", "Songti TC", "PMingLiU", serif;
+		font-size: clamp(1.15rem, 2.2vw, 1.55rem);
+		font-weight: 800;
+		letter-spacing: 0.12em;
+		line-height: 1.25;
+		text-shadow: 0 1px 2px rgb(0 0 0 / 20%);
+	}
+
+	.brand-tagline {
+		margin: 3px 0 0;
+		color: #e2c98e;
+		font-family: "Kulim Park", "Noto Sans TC", sans-serif;
+		font-size: 0.75rem;
+		letter-spacing: 0.1em;
+		line-height: 1.2;
+	}
+
+	.brand-accent {
+		width: 48px;
+		height: 1px;
+		margin-left: auto;
+		background: linear-gradient(90deg, transparent, #d9b56d);
+	}
+
+
 	flex-flow: column nowrap;
 	position: relative;
 	width: 100%;
