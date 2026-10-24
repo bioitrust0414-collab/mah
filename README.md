@@ -10,6 +10,23 @@
 - **Netlify 專案：** https://app.netlify.com/projects/mj-game/overview
 - **上游原始專案：** https://github.com/ffalt/mah
 
+## 雙遊戲整合
+
+本專案提供兩種玩法，使用同一個網站入口與品牌，遊戲引擎維持獨立：
+
+1. **Mah 多牌型模式**：沿用本 Repo 原有 Angular 遊戲，包含多種牌型、每日挑戰、難度與個人化設定。
+2. **經典 144 張模式**：整合自 [telegram-mahjong-solitaire](https://github.com/bioitrust0414-collab/telegram-mahjong-solitaire)，以單檔 HTML 遊戲獨立執行。
+
+### 經典模式路徑
+
+- 原始整合檔：`src/assets/telegram-mahjong/index.html`
+- 建置後預期路徑：`/assets/telegram-mahjong/index.html`
+- 玩法特色：144 張烏龜布局、保證可解發牌、計時、分數、提示、復原、洗牌與音效。
+- Telegram WebApp SDK 偵測仍保留；一般瀏覽器也可直接遊玩。
+- 兩種模式不共用遊戲狀態，避免一方的發牌／復原機制影響另一方。
+
+此階段採「共用網站入口、獨立遊戲引擎」的低風險整合方式；尚未合併帳號、排行榜或跨模式紀錄。
+
 ## 本專案的客製化方向
 
 - 網站品牌名稱採用「麻將接龍」。
